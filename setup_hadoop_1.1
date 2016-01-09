@@ -1,0 +1,21 @@
+#!/bin/bash
+
+sudo apt-get update
+
+#Install Java
+sudo apt-get install -y default-jdk
+
+#Generate SSH Key
+ssh-keygen -t rsa -P ''
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+#Install Hadoop : http://www.apache.org/dyn/closer.cgi/hadoop/common/
+wget http://redrockdigimark.com/apachemirror/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
+tar -xf hadoop-1.2.1.tar.gz
+sudo mv hadoop-1.2.1 /usr/local/hadoop
+
+#Adding Hadoop Environment Variables File
+cp .bashrc ~/.bashrc
+source ~/.bashrc
+
+rm *.tar.gz
