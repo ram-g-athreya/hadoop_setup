@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get install -y default-jdk
 
 #Generate SSH Key
-ssh-keygen -t rsa -P ''
+echo -ne '\n' | ssh-keygen -t rsa -P ''
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 #Install Hadoop : http://www.apache.org/dyn/closer.cgi/hadoop/common/

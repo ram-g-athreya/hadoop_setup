@@ -125,6 +125,16 @@ export HADOOP_HDFS_HOME=$HADOOP_PREFIX
 export HADOOP_MAPRED_HOME=$HADOOP_PREFIX
 export HADOOP_YARN_HOME=$HADOOP_PREFIX
 
+export NN_DATA_DIR=/var/data/hadoop/hdfs/nn
+export SNN_DATA_DIR=/var/data/hadoop/hdfs/snn
+export DN_DATA_DIR=/var/data/hadoop/hdfs/dn
+export YARN_LOG_DIR=/var/log/hadoop/yarn
+export HADOOP_LOG_DIR=/var/log/hadoop/hdfs
+export HADOOP_MAPRED_LOG_DIR=/var/log/hadoop/mapred
+export YARN_PID_DIR=/var/run/hadoop/yarn
+export HADOOP_PID_DIR=/var/run/hadoop/hdfs
+export HADOOP_MAPRED_PID_DIR=/var/run/hadoop/mapred
+
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 #HADOOP VARIABLES END
