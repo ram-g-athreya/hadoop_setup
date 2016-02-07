@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Update
 sudo apt-get update
 
 #Install Java
@@ -10,15 +11,15 @@ ssh-keygen -t rsa -P ''
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 #Install Hadoop : http://www.apache.org/dyn/closer.cgi/hadoop/common/
-wget http://redrockdigimark.com/apachemirror/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz
-tar -xf hadoop-1.2.1.tar.gz
-sudo mv hadoop-1.2.1 /usr/local/hadoop
+wget http://a.mbbsindia.com/hadoop/common/stable2/hadoop-2.7.2.tar.gz
+tar -xf hadoop-2.7.2.tar.gz
+sudo mv hadoop-2.7.2 /usr/local/hadoop
 
 #Adding Hadoop Environment Variables File
-cp conf_1.1/.bashrc ~/.bashrc
-source ~/.bashrc
+#cp .bashrc ~/.bashrc
+#source ~/.bashrc
 
 #Adding Configuration Files
-sudo cp conf_1.1/* /usr/local/hadoop/conf/
+#sudo cp conf/* /usr/local/hadoop/conf/
 
-rm *.tar.gz
+#rm *.tar.gz
