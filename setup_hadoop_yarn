@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# sudo adduser hduser
+# USE PASSWORD HADOOP
+
 #Update
 sudo apt-get update
 
@@ -13,13 +16,15 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 #Install Hadoop : http://www.apache.org/dyn/closer.cgi/hadoop/common/
 wget http://a.mbbsindia.com/hadoop/common/stable2/hadoop-2.7.2.tar.gz
 tar -xf hadoop-2.7.2.tar.gz
-sudo mv hadoop-2.7.2 /usr/local/hadoop
+sudo mv hadoop-2.7.2 ~/hadoop
 
 #Adding Hadoop Environment Variables File
-#cp .bashrc ~/.bashrc
-#source ~/.bashrc
+cp .bashrc >> ~/.bashrc
+source ~/.bashrc
+
+rm *.tar.gz
 
 #Adding Configuration Files
-#sudo cp conf/* /usr/local/hadoop/conf/
+#cp conf/* ~/hadoop/etc/hadoop/
 
-#rm *.tar.gz
+# hdfs dfs -mkdir -p /user/hduser
